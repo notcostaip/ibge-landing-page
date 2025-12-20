@@ -1,0 +1,83 @@
+/* =========================================
+   ANIMAÇÕES E INTERAÇÕES MÓVEIS
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* 1. Pulso Forte para Botões de Chamada para Ação (CTA) */
+    .cta-button {
+        animation: mobile-btn-pulse 2s infinite ease-in-out !important;
+    }
+
+    @keyframes mobile-btn-pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(0, 128, 128, 0.7);
+        }
+
+        50% {
+            transform: scale(1.02);
+            box-shadow: 0 0 0 10px rgba(0, 128, 128, 0);
+        }
+
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(0, 128, 128, 0);
+        }
+    }
+
+    /* Estado Ativo para Botões */
+    .cta-button:active {
+        animation: none !important;
+        transform: scale(0.95) !important;
+        background-color: var(--teal-hover);
+    }
+
+    /* 2. Animação do Emblema Flutuante - REFORÇADA */
+    .floating-badge {
+        animation: mobile-badge-pulse-glow 2.5s infinite ease-in-out !important;
+        display: inline-block !important;
+    }
+
+    @keyframes mobile-badge-pulse-glow {
+
+        0%,
+        100% {
+            transform: scale(1);
+            border-color: #e63946;
+            box-shadow: 0 0 5px rgba(230, 57, 70, 0.2);
+        }
+
+        50% {
+            transform: scale(1.05);
+            border-color: #ff6b6b;
+            box-shadow: 0 0 15px rgba(230, 57, 70, 0.6);
+        }
+    }
+
+    /* 3. Animações de Ícones */
+    .pain-card i,
+    .benefit-card i,
+    .guarantee-icon {
+        animation: mobile-icon-bounce 3s infinite ease-in-out;
+    }
+
+    @keyframes mobile-icon-bounce {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+
+    /* 4. Interações de Cartões */
+    .pain-card:active,
+    .benefit-card:active,
+    .testimonial-card:active {
+        transform: scale(0.98);
+        transition: transform 0.1s;
+    }
+}
