@@ -100,6 +100,6 @@ Basta abrir o arquivo `index.html` em qualquer navegador web moderno! 🚀 Não 
 
 <br/>
 
-**Feito por [Costa](https://github.com/notcostaip) com ☕ e muita diversão.**
+**Created by [Costa](https://github.com/notcostaip)**
 
 </div>
